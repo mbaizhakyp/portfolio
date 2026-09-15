@@ -4,10 +4,11 @@ A minimal single-page portfolio for `mbaizhakyp.com`.
 
 ## Edit Points
 
-- Update contact links in `index.html` near the `contact-links` section.
-- Replace project placeholders in the `project-grid` section.
+- Featured projects live in the `project-list` in `index.html`; secondary ones in `more-list`.
+- Experience and skills are in the `#experience` section; contact links in `#contact`.
 - Replace or update the resume PDF at `assets/Margulan_Baizhakyp_Resume.pdf`.
-- Replace the hero image at `assets/academic-desk.png` if you want a different visual direction.
+- Colors and type are CSS custom properties at the top of `styles.css`; dark mode follows the system setting.
+- Bump the `?v=` query on the stylesheet link in `index.html` when you change `styles.css` so browsers pick it up.
 
 ## Preview Locally
 
