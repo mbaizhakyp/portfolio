@@ -5,186 +5,295 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Margulan Baizhakyp builds full-stack systems, real-time backends, and data-driven software."
+      content="Margulan Baizhakyp builds real-time backends, data tools, and the interfaces on top of them. CS student at the University of Alabama."
     />
-    <title>Margulan Baizhakyp | Portfolio</title>
+    <meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#121311" media="(prefers-color-scheme: dark)" />
+    <title>Margulan Baizhakyp</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=2" />
   </head>
   <body>
-    <header class="site-header" data-header>
-      <a class="brand" href="#top" aria-label="Margulan Baizhakyp home">MB</a>
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#resume">Resume</a>
+    <a class="skip-link" href="#projects">Skip to projects</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top">Margulan Baizhakyp</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#projects">Work</a>
+        <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
+        <a href="assets/Margulan_Baizhakyp_Resume.pdf">Resume</a>
       </nav>
     </header>
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
-        <img
-          class="hero-image"
-          src="assets/academic-desk.png"
-          alt="A quiet academic desk with papers, a notebook, and a laptop."
-        />
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <p class="eyebrow">Full-stack systems builder</p>
-          <h1 id="hero-title">Margulan Baizhakyp</h1>
-          <p class="hero-copy">
-            I design and build software with a product mindset: real-time backends,
-            data tools, and web experiences that turn complex workflows into clear,
-            usable systems.
-          </p>
-          <div class="hero-actions" aria-label="Important links">
-            <a class="button primary" href="#projects">Explore Work</a>
-            <a class="button secondary" href="assets/Margulan_Baizhakyp_Resume.pdf">Resume</a>
+        <h1 id="hero-title">
+          I build real-time backends, data tools, and the interfaces that make them usable.
+        </h1>
+        <p class="hero-copy">
+          Computer science student at the University of Alabama and AI research assistant
+          building geospatial retrieval tooling. I like projects where the interface,
+          the infrastructure, and the domain logic all have to work together.
+        </p>
+        <dl class="now">
+          <div>
+            <dt>Now</dt>
+            <dd>Research assistant at UA, working on RAG over hydrological data.</dd>
           </div>
-          <dl class="signal-strip" aria-label="Portfolio highlights">
-            <div>
-              <dt>Focus</dt>
-              <dd>Full-stack engineering</dd>
-            </div>
-            <div>
-              <dt>Recent work</dt>
-              <dd>Logistics, ML, data</dd>
-            </div>
-            <div>
-              <dt>Stack</dt>
-              <dd>Go, Python, React</dd>
-            </div>
-          </dl>
-        </div>
-      </section>
-
-      <section class="section intro" aria-labelledby="about-title">
-        <div class="section-heading">
-          <p class="section-kicker">About</p>
-          <h2 id="about-title">Building practical software with sharp execution.</h2>
-        </div>
-        <div class="section-body">
-          <p>
-            I am a computer science student focused on full-stack engineering,
-            backend systems, and applied data products. I like projects where the
-            interface, infrastructure, and domain logic all have to work together.
-          </p>
-          <p>
-            My work leans toward clear architecture, readable code, and product
-            decisions that make the technical details easier for people to use.
-          </p>
-        </div>
+          <div>
+            <dt>Next</dt>
+            <dd>Open to software engineering internships. <a href="mailto:mbaizhakyp@gmail.com">Say hello</a>.</dd>
+          </div>
+        </dl>
       </section>
 
       <section class="section" id="projects" aria-labelledby="projects-title">
-        <div class="section-heading">
-          <p class="section-kicker">Selected Work</p>
-          <h2 id="projects-title">Projects shaped around real systems and data.</h2>
+        <div class="section-head">
+          <h2 id="projects-title">Selected work</h2>
+          <p>Six projects, most recent first. Each one shipped past the tutorial stage.</p>
         </div>
-        <div class="project-grid">
-          <article class="project-card">
-            <div>
-              <p class="project-label">Distributed Backend</p>
-              <h3>Order Tracker</h3>
+
+        <ol class="project-list">
+          <li class="project">
+            <div class="project-meta">
+              <span class="project-index">01</span>
+              <span class="project-year">2026</span>
+            </div>
+            <div class="project-body">
+              <h3><a href="https://github.com/mbaizhakyp/deepspace-task">Warroom</a></h3>
+              <p class="project-tagline">A realtime decision room. The meeting is the artifact.</p>
               <p>
-                A real-time logistics backend that ingests orders, dispatches nearby
-                shoppers with Redis Geo, and protects order claiming with PostgreSQL
-                transactional locking.
+                Multi-user boards where imported documents become live cards, decisions are
+                made with one-vote polls the database enforces, and a facilitator can freeze
+                the room at the server boundary. Every room ends with an AI-written dispatch
+                of what was decided, with evidence and vote counts. Free and Pro tiers gate
+                server-side through live Stripe checkout.
+              </p>
+              <ul class="stack" aria-label="Stack">
+                <li>React</li><li>Hono</li><li>Cloudflare Durable Objects</li><li>Stripe</li><li>Claude</li><li>Playwright</li>
+              </ul>
+              <p class="project-links">
+                <a href="https://github.com/mbaizhakyp/deepspace-task">Source</a>
               </p>
             </div>
-            <ul class="tag-list" aria-label="Technology stack">
-              <li>Go</li>
-              <li>Kafka</li>
-              <li>Redis</li>
-              <li>PostgreSQL</li>
-              <li>WebSockets</li>
-            </ul>
-            <div class="project-links">
-              <a href="https://github.com/mbaizhakyp/order-tracker" target="_blank" rel="noreferrer">GitHub</a>
-              <a href="https://www.youtube.com/watch?v=dI_CtcXSh2s" target="_blank" rel="noreferrer">Demo Video</a>
-            </div>
-          </article>
+          </li>
 
-          <article class="project-card">
-            <div>
-              <p class="project-label">Machine Learning</p>
-              <h3>Medicare Fraud Detection</h3>
+          <li class="project">
+            <div class="project-meta">
+              <span class="project-index">02</span>
+              <span class="project-year">2026</span>
+            </div>
+            <div class="project-body">
+              <h3><a href="https://lamp.mbaizhakyp.com">Green Lamp</a></h3>
+              <p class="project-tagline">A late-night study desk with four named tutors.</p>
               <p>
-                A fraud-risk analysis project using public CMS Medicare billing data,
-                OIG exclusion records, feature engineering, and XGBoost with an
-                interactive Streamlit investigation demo.
+                Mira, Theo, Ada, and Jules each teach differently. Real accounts, notes and
+                flashcards in Postgres, and an agent tool loop that can read and write the
+                desk. Self-hosted on Vercel and Neon with authentication the app owns.
+              </p>
+              <ul class="stack" aria-label="Stack">
+                <li>TanStack Start</li><li>PostgreSQL</li><li>Better Auth</li><li>OpenAI / xAI</li><li>Vercel</li>
+              </ul>
+              <p class="project-links">
+                <a href="https://lamp.mbaizhakyp.com">lamp.mbaizhakyp.com</a>
+                <a href="https://github.com/mbaizhakyp/green-lamp">Source</a>
               </p>
             </div>
-            <ul class="tag-list" aria-label="Technology stack">
-              <li>Python</li>
-              <li>XGBoost</li>
-              <li>Streamlit</li>
-              <li>Pandas</li>
-              <li>CMS Data</li>
-            </ul>
-            <div class="project-links">
-              <a href="https://github.com/mbaizhakyp/medicare-fraud-detection" target="_blank" rel="noreferrer">GitHub</a>
+          </li>
+
+          <li class="project">
+            <div class="project-meta">
+              <span class="project-index">03</span>
+              <span class="project-year">2026</span>
             </div>
-          </article>
+            <div class="project-body">
+              <h3><a href="https://github.com/mbaizhakyp/medicare-fraud-detection">Medicare Fraud Detection</a></h3>
+              <p class="project-tagline">Flagging high-risk providers from public CMS billing data.</p>
+              <p>
+                Joins Medicare Part D prescriber data for Alabama, Georgia, and Tennessee with
+                the OIG exclusion list as ground truth, engineers provider-level features, and
+                trains an XGBoost classifier. A Streamlit app lets you investigate individual
+                providers with SHAP explanations.
+              </p>
+              <ul class="stack" aria-label="Stack">
+                <li>Python</li><li>XGBoost</li><li>Pandas</li><li>SHAP</li><li>Streamlit</li>
+              </ul>
+              <p class="project-links">
+                <a href="https://github.com/mbaizhakyp/medicare-fraud-detection">Source</a>
+              </p>
+            </div>
+          </li>
+
+          <li class="project">
+            <div class="project-meta">
+              <span class="project-index">04</span>
+              <span class="project-year">2025</span>
+            </div>
+            <div class="project-body">
+              <h3><a href="https://github.com/mbaizhakyp/order-tracker">Last-Mile Delivery Engine</a></h3>
+              <p class="project-tagline">Event-driven logistics backend in Go.</p>
+              <p>
+                Ingests orders through Kafka, finds shoppers within 15 km using Redis Geo,
+                and pushes offers over WebSockets. Order claiming is atomic through
+                row-level locking in Postgres, so two couriers can never take the same job.
+                A ghost-car simulator exercises the whole loop locally.
+              </p>
+              <ul class="stack" aria-label="Stack">
+                <li>Go</li><li>Kafka</li><li>Redis</li><li>PostgreSQL</li><li>WebSockets</li><li>Docker</li>
+              </ul>
+              <p class="project-links">
+                <a href="https://github.com/mbaizhakyp/order-tracker">Source</a>
+                <a href="https://www.youtube.com/watch?v=dI_CtcXSh2s">Demo video</a>
+              </p>
+            </div>
+          </li>
+
+          <li class="project">
+            <div class="project-meta">
+              <span class="project-index">05</span>
+              <span class="project-year">2025</span>
+            </div>
+            <div class="project-body">
+              <h3><a href="https://github.com/mbaizhakyp/vandyhacks">Wallet Guard</a></h3>
+              <p class="project-tagline">A budgeting app that intervenes before you overspend. Built at VandyHacks 2025.</p>
+              <p>
+                Walk into a high-spend zone and it calls your phone with a coaching voice
+                grounded in your real transactions. Savings commitments are escrowed on
+                Solana for 21 days, so you cannot quietly back out. Ships with a color-blind
+                mode, large text, and full Spanish localization.
+              </p>
+              <ul class="stack" aria-label="Stack">
+                <li>React</li><li>Gemini</li><li>ElevenLabs</li><li>Twilio</li><li>Solana</li><li>Mapbox</li>
+              </ul>
+              <p class="project-links">
+                <a href="https://github.com/mbaizhakyp/vandyhacks">Source</a>
+              </p>
+            </div>
+          </li>
+
+          <li class="project">
+            <div class="project-meta">
+              <span class="project-index">06</span>
+              <span class="project-year">2025</span>
+            </div>
+            <div class="project-body">
+              <h3><a href="https://github.com/mbaizhakyp/alabama-map">Alabama Flood Map</a></h3>
+              <p class="project-tagline">Weather, river gauges, and social vulnerability on one map.</p>
+              <p>
+                Pulls ten-day precipitation forecasts, NOAA river-level forecasts, live USGS
+                gauge readings, and CDC vulnerability data by census tract, then lets you ask
+                about flood risk in plain language with an assistant that reads the same data.
+              </p>
+              <ul class="stack" aria-label="Stack">
+                <li>Node.js</li><li>Mapbox GL</li><li>NOAA / USGS</li><li>PostgreSQL</li><li>OpenAI</li>
+              </ul>
+              <p class="project-links">
+                <a href="https://github.com/mbaizhakyp/alabama-map">Source</a>
+              </p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="more-work">
+          <h3>More work</h3>
+          <ul class="more-list">
+            <li>
+              <a href="https://github.com/mbaizhakyp/parton">Forever Dolly</a>
+              <span>Realtime fan tribute wall, server-graded quiz with a live leaderboard, and a streamed AI guide.</span>
+            </li>
+            <li>
+              <a href="https://github.com/mbaizhakyp/trustmrr-analyzer">TrustMRR Analyzer</a>
+              <span>Scrapes verified startup revenue data and classifies ~1,100 companies with the Claude Batches API.</span>
+            </li>
+            <li>
+              <a href="https://github.com/mbaizhakyp/frontdesk-ai">Reception Suite</a>
+              <span>Multi-tenant AI front desk for service businesses: answers calls, books, and texts back missed leads.</span>
+            </li>
+            <li>
+              <a href="https://github.com/mbaizhakyp/riskscribe-evaluation">RiskScribe Evaluation</a>
+              <span>Public evaluation framework for fact-locked infographic generation in hazard communication research.</span>
+            </li>
+            <li>
+              <a href="https://github.com/mbaizhakyp/smart-answer">Smart Answer</a>
+              <span>Chrome extension plus FastAPI backend that reads quiz pages and fuzzy-matches model answers to options.</span>
+            </li>
+          </ul>
+          <p class="all-repos"><a href="https://github.com/mbaizhakyp?tab=repositories">Everything else on GitHub</a></p>
         </div>
       </section>
 
-      <section class="section split-section" id="skills" aria-labelledby="skills-title">
-        <div class="section-heading">
-          <p class="section-kicker">Skills</p>
-          <h2 id="skills-title">A stack built for shipping useful products.</h2>
+      <section class="section" id="experience" aria-labelledby="experience-title">
+        <div class="section-head">
+          <h2 id="experience-title">Experience</h2>
         </div>
-        <div class="skill-groups">
-          <div class="skill-group">
-            <h3>Frontend</h3>
-            <p>React, Next.js, TypeScript, JavaScript, HTML, CSS</p>
+        <ol class="timeline">
+          <li>
+            <span class="timeline-when">May 2025 to present</span>
+            <div>
+              <h3>AI Research Assistant, University of Alabama</h3>
+              <p>
+                Built a two-stage retrieval pipeline over hydrological datasets with PostgreSQL
+                and pgvector, and a React and Mapbox interface that keeps a conversational
+                assistant in sync with PostGIS spatial data.
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="timeline-when">2023 to 2028</span>
+            <div>
+              <h3>B.S. and accelerated M.S. in Computer Science, University of Alabama</h3>
+              <p>
+                Focus on distributed systems and high-performance backends. Spring 2025 study
+                abroad at Carlos III University of Madrid.
+              </p>
+            </div>
+          </li>
+        </ol>
+
+        <dl class="skills">
+          <div>
+            <dt>Languages</dt>
+            <dd>Go, Python, TypeScript, JavaScript, SQL, C, C++</dd>
           </div>
-          <div class="skill-group">
-            <h3>Backend</h3>
-            <p>Go, Node.js, Express, REST APIs, Python, PostgreSQL</p>
+          <div>
+            <dt>Backend and data</dt>
+            <dd>PostgreSQL, Redis, Kafka, WebSockets, pgvector, Docker, AWS</dd>
           </div>
-          <div class="skill-group">
-            <h3>Systems & Data</h3>
-            <p>Kafka, Redis, WebSockets, Docker, XGBoost, Streamlit</p>
+          <div>
+            <dt>Frontend</dt>
+            <dd>React, Next.js, TanStack, Mapbox GL, Tailwind</dd>
           </div>
-        </div>
+          <div>
+            <dt>AI</dt>
+            <dd>RAG pipelines, tool-calling agents, XGBoost, PyTorch</dd>
+          </div>
+        </dl>
       </section>
 
-      <section class="section resume-section" id="resume" aria-labelledby="resume-title">
-        <div class="section-heading">
-          <p class="section-kicker">Resume</p>
-          <h2 id="resume-title">Experience, projects, and technical direction.</h2>
+      <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <div class="section-head">
+          <h2 id="contact-title">Contact</h2>
         </div>
-        <div class="resume-panel">
-          <p>
-            A concise snapshot for software engineering internships, project
-            collaborations, and technical opportunities.
-          </p>
-          <a class="button primary" href="assets/Margulan_Baizhakyp_Resume.pdf">Open Resume</a>
-        </div>
-      </section>
-
-      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
-        <div class="section-heading">
-          <p class="section-kicker">Contact</p>
-          <h2 id="contact-title">Let’s connect.</h2>
-        </div>
-        <div class="contact-links" aria-label="Contact links">
-          <a href="mailto:mbaizhakyp@gmail.com">Email</a>
-          <a href="https://github.com/mbaizhakyp" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/mbaizhakyp" target="_blank" rel="noreferrer">LinkedIn</a>
-        </div>
+        <p class="contact-copy">
+          The fastest way to reach me is email. I read everything.
+        </p>
+        <ul class="contact-links">
+          <li><a href="mailto:mbaizhakyp@gmail.com">mbaizhakyp@gmail.com</a></li>
+          <li><a href="https://github.com/mbaizhakyp">github.com/mbaizhakyp</a></li>
+          <li><a href="https://www.linkedin.com/in/mbaizhakyp">linkedin.com/in/mbaizhakyp</a></li>
+          <li><a href="assets/Margulan_Baizhakyp_Resume.pdf">Resume (PDF)</a></li>
+        </ul>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>© <span data-year></span> Margulan Baizhakyp</p>
+      <p>&copy; <span data-year>2026</span> Margulan Baizhakyp. Tuscaloosa, Alabama.</p>
       <a href="#top">Back to top</a>
     </footer>
 
